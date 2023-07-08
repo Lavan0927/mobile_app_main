@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="GRADLE" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$USER_HOME$/.pub-cache/git/pusher_client-81870488665b2c4dbc35e50554c07d5d9b0a7cdb/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/connectivity_plus-3.0.6/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.15/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/image_picker_android-0.8.7+4/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/onesignal_flutter-3.5.1/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/path_provider_android-2.1.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_android-2.2.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/smart_auth-1.1.1/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite-2.3.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/stripe_android-3.3.0/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/url_launcher_android-6.0.37/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/video_player_android-2.4.9/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dev/webview_flutter_android-2.10.4/android" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

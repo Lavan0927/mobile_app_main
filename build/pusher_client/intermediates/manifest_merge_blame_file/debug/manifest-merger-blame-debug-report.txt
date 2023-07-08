@@ -1,0 +1,11 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.github.chinloyal.pusher_client" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="16"
+6-->/Users/lavanya/.pub-cache/git/pusher_client-81870488665b2c4dbc35e50554c07d5d9b0a7cdb/android/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="16" />
+7-->/Users/lavanya/.pub-cache/git/pusher_client-81870488665b2c4dbc35e50554c07d5d9b0a7cdb/android/src/main/AndroidManifest.xml
+8
+9</manifest>

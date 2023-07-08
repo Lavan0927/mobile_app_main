@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.quomodosoft.shopo2.app-mergeDebugResources-87:/values-id/values-id.xml",
+            "map": [
+                {
+                    "source": "/Users/lavanya/.gradle/caches/transforms-3/31c09a64d4e6a8585a3af9839fd052b3/transformed/jetified-play-services-wallet-19.1.0/res/values-id/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "202",
+                        "endColumns": "73",
+                        "endOffsets": "275"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "77",
+                        "endOffsets": "128"
+                    }
+                }
+            ]
+        }
+    ]
+}

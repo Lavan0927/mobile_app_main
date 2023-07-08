@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/lavanya/.pub-cache/git/pusher_client-81870488665b2c4dbc35e50554c07d5d9b0a7cdb/android/src/main/jniLibs"/></dataSet><dataSet config="debug" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/lavanya/.pub-cache/git/pusher_client-81870488665b2c4dbc35e50554c07d5d9b0a7cdb/android/src/debug/jniLibs"/></dataSet></merger>

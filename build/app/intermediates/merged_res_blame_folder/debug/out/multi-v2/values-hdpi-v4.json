@@ -1,0 +1,38 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.quomodosoft.shopo2.app-mergeDebugResources-87:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/lavanya/.gradle/caches/transforms-3/fd55b7e153373e503524d3fd60fa7322/transformed/appcompat-1.4.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    },
+                    "to": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "112",
+                        "endLines": "7",
+                        "endColumns": "13",
+                        "endOffsets": "384"
+                    }
+                },
+                {
+                    "source": "/Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                }
+            ]
+        }
+    ]
+}

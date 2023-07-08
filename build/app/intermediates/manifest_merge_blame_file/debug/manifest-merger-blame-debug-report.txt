@@ -1,0 +1,1027 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.quomodosoft.shopapp"
+4    android:versionCode="3"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="22"
+9        android:targetSdkVersion="32" />
+10    <!--
+11         Flutter needs it to communicate with the running application
+12         to allow setting breakpoints, to provide hot reload, etc.
+13    -->
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->/Users/lavanya/Desktop/mobile_app-main/android/app/src/main/AndroidManifest.xml:4:5-67
+14-->/Users/lavanya/Desktop/mobile_app-main/android/app/src/main/AndroidManifest.xml:4:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- See https://developer.android.com/training/package-visibility/declaring for more details. -->
+15-->[:connectivity_plus] /Users/lavanya/Desktop/mobile_app-main/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+15-->[:connectivity_plus] /Users/lavanya/Desktop/mobile_app-main/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+16    <queries>
+16-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:12:5-20:15
+17
+18        <!-- Added to check the default browser that will host the AuthFlow. -->
+19        <intent>
+19-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:15:9-19:18
+20            <action android:name="android.intent.action.VIEW" />
+20-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:13-65
+20-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:21-62
+21
+22            <data android:scheme="http" />
+22-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:13-43
+22-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:19-40
+23        </intent>
+24        <!-- Added to check if Chrome is installed for browser-based payment authentication (e.g. 3DS1). -->
+25        <package android:name="com.android.chrome" /> <!-- Needs to be explicitly declared on Android R+ -->
+25-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:13:9-54
+25-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:13:18-51
+26        <package android:name="com.google.android.apps.maps" />
+26-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+26-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+27    </queries> <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
+28    <permission
+28-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:7:5-9:47
+29        android:name="com.quomodosoft.shopapp.permission.C2D_MESSAGE"
+29-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:8:9-63
+30        android:protectionLevel="signature" />
+30-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:9:9-44
+31
+32    <uses-permission android:name="com.quomodosoft.shopapp.permission.C2D_MESSAGE" /> <!-- OneSignal SDK has runtime checks Android version. -->
+32-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:11:5-79
+32-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:11:22-76
+33    <!-- <uses-sdk tools:overrideLibrary="android.support.customtabs"/> -->
+34    <!-- Required runtime permission to display notifications on Android 13 -->
+35    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- c2dm RECEIVE are basic requirements for push messages through Google's FCM -->
+35-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:16:5-77
+35-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:16:22-74
+36    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
+36-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:18:5-82
+36-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:18:22-79
+37    <uses-permission android:name="android.permission.WAKE_LOCK" />
+37-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:19:5-68
+37-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:19:22-65
+38    <!--
+39 Required so the device vibrates on receiving a push notification.
+40         Vibration settings of the device still apply.
+41    -->
+42    <uses-permission android:name="android.permission.VIBRATE" />
+42-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:24:5-66
+42-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:24:22-63
+43    <!--
+44 Use to restore notifications the user hasn't interacted with.
+45         They could be missed notifications if the user reboots their device if this isn't in place.
+46    -->
+47    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" /> <!-- START: ShortcutBadger -->
+47-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:30:5-81
+47-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:30:22-78
+48    <!-- Samsung -->
+49    <uses-permission android:name="com.sec.android.provider.badge.permission.READ" />
+49-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:32:5-86
+49-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:32:22-83
+50    <uses-permission android:name="com.sec.android.provider.badge.permission.WRITE" /> <!-- HTC -->
+50-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:33:5-87
+50-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:33:22-84
+51    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+51-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:34:5-81
+51-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:34:22-78
+52    <uses-permission android:name="com.htc.launcher.permission.UPDATE_SHORTCUT" /> <!-- Sony -->
+52-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:35:5-83
+52-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:35:22-80
+53    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+53-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:36:5-88
+53-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:36:22-85
+54    <uses-permission android:name="com.sonymobile.home.permission.PROVIDER_INSERT_BADGE" /> <!-- Apex -->
+54-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:37:5-92
+54-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:37:22-89
+55    <uses-permission android:name="com.anddoes.launcher.permission.UPDATE_COUNT" /> <!-- Solid -->
+55-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:38:5-84
+55-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:38:22-81
+56    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" /> <!-- Huawei -->
+56-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:39:5-83
+56-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:39:22-80
+57    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
+57-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:40:5-91
+57-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:40:22-88
+58    <uses-permission android:name="com.huawei.android.launcher.permission.READ_SETTINGS" />
+58-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:41:5-92
+58-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:41:22-89
+59    <uses-permission android:name="com.huawei.android.launcher.permission.WRITE_SETTINGS" /> <!-- ZUK -->
+59-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:42:5-93
+59-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:42:22-90
+60    <uses-permission android:name="android.permission.READ_APP_BADGE" /> <!-- OPPO -->
+60-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:43:5-73
+60-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:43:22-70
+61    <uses-permission android:name="com.oppo.launcher.permission.READ_SETTINGS" />
+61-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:44:5-82
+61-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:44:22-79
+62    <uses-permission android:name="com.oppo.launcher.permission.WRITE_SETTINGS" /> <!-- EvMe -->
+62-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:45:5-83
+62-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:45:22-80
+63    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_READ" />
+63-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:46:5-88
+63-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:46:22-85
+64    <uses-permission android:name="me.everything.badger.permission.BADGE_COUNT_WRITE" />
+64-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:47:5-89
+64-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:47:22-86
+65
+66    <uses-feature
+66-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+67        android:glEsVersion="0x00020000"
+67-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+68        android:required="true" />
+68-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
+69
+70    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+70-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:5-77
+70-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:28:22-74
+71
+72    <permission
+72-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:22:5-24:47
+73        android:name="com.quomodosoft.shopapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+73-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:23:9-81
+74        android:protectionLevel="signature" />
+74-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:24:9-44
+75
+76    <uses-permission android:name="com.quomodosoft.shopapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+76-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:26:5-97
+76-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:26:22-94
+77
+78    <application
+79        android:name="android.app.Application"
+80        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+80-->[androidx.core:core:1.10.1] /Users/lavanya/.gradle/caches/transforms-3/ad739d1db08b644321145c5854e578b6/transformed/core-1.10.1/AndroidManifest.xml:28:18-86
+81        android:debuggable="true"
+82        android:icon="@mipmap/launcher_icon"
+83        android:label="ShopO App"
+84        android:networkSecurityConfig="@xml/network_security_config" >
+85        <activity
+86            android:name="com.quomodosoft.shopo2.MainActivity"
+87            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+88            android:exported="true"
+89            android:hardwareAccelerated="true"
+90            android:launchMode="singleTop"
+91            android:theme="@style/LaunchTheme"
+92            android:windowSoftInputMode="adjustResize" >
+93
+94            <!--
+95                 Specifies an Android theme to apply to this Activity as soon as
+96                 the Android process has started. This theme is visible to the user
+97                 while the Flutter UI initializes. After that, this theme continues
+98                 to determine the Window background behind the Flutter UI.
+99            -->
+100            <meta-data
+101                android:name="io.flutter.embedding.android.NormalTheme"
+102                android:resource="@style/NormalTheme" />
+103
+104            <intent-filter>
+105                <action android:name="android.intent.action.MAIN" />
+106
+107                <category android:name="android.intent.category.LAUNCHER" />
+108            </intent-filter>
+109        </activity>
+110        <!--
+111             Don't delete the meta-data below.
+112             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+113        -->
+114        <meta-data
+115            android:name="flutterEmbedding"
+116            android:value="2" />
+117
+118        <provider
+118-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+119            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+119-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+120            android:authorities="com.quomodosoft.shopapp.flutter.image_provider"
+120-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+121            android:exported="false"
+121-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+122            android:grantUriPermissions="true" >
+122-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+123            <meta-data
+123-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+124                android:name="android.support.FILE_PROVIDER_PATHS"
+124-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+125                android:resource="@xml/flutter_image_picker_file_paths" />
+125-->[:image_picker_android] /Users/lavanya/Desktop/mobile_app-main/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+126        </provider>
+127
+128        <activity
+128-->[:url_launcher_android] /Users/lavanya/Desktop/mobile_app-main/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+129            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+129-->[:url_launcher_android] /Users/lavanya/Desktop/mobile_app-main/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
+130            android:exported="false"
+130-->[:url_launcher_android] /Users/lavanya/Desktop/mobile_app-main/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+131            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+131-->[:url_launcher_android] /Users/lavanya/Desktop/mobile_app-main/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+132        <activity
+132-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:23:9-42:20
+133            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity"
+133-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:24:13-109
+134            android:exported="true" >
+134-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:25:13-36
+135            <intent-filter>
+135-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:26:13-41:29
+136                <action android:name="android.intent.action.VIEW" />
+136-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:13-65
+136-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:21-62
+137
+138                <category android:name="android.intent.category.DEFAULT" />
+138-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:29:17-76
+138-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:29:27-73
+139                <category android:name="android.intent.category.BROWSABLE" />
+139-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:30:17-78
+139-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:30:27-75
+140
+141                <!-- Accepts success and cancel URIs that begin with "stripe-auth://link-accounts” -->
+142                <data
+142-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:13-43
+143                    android:host="link-accounts"
+144                    android:path="/com.quomodosoft.shopapp/success"
+145                    android:scheme="stripe-auth" />
+145-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:19-40
+146                <data
+146-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:13-43
+147                    android:host="link-accounts"
+148                    android:path="/com.quomodosoft.shopapp/cancel"
+149                    android:scheme="stripe-auth" />
+149-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:19-40
+150            </intent-filter>
+151        </activity>
+152        <activity
+152-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:43:9-46:57
+153            android:name="com.stripe.android.financialconnections.FinancialConnectionsSheetActivity"
+153-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:44:13-101
+154            android:exported="false"
+154-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:45:13-37
+155            android:theme="@style/StripeDefaultTheme" />
+155-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:46:13-54
+156        <activity
+156-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:10:9-13:69
+157            android:name="com.stripe.android.paymentsheet.PaymentSheetActivity"
+157-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:11:13-80
+158            android:exported="false"
+158-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:12:13-37
+159            android:theme="@style/StripePaymentSheetDefaultTheme" />
+159-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:13:13-66
+160        <activity
+160-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:14:9-17:69
+161            android:name="com.stripe.android.paymentsheet.PaymentOptionsActivity"
+161-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:15:13-82
+162            android:exported="false"
+162-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:16:13-37
+163            android:theme="@style/StripePaymentSheetDefaultTheme" />
+163-->[com.stripe:paymentsheet:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/00e73383e67b8bf1d561521d67634ac8/transformed/jetified-paymentsheet-20.4.0/AndroidManifest.xml:17:13-66
+164        <activity
+164-->[com.stripe:link:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/5db6317ed8c3f19183a7c001cd28626e/transformed/jetified-link-20.4.0/AndroidManifest.xml:10:9-13:44
+165            android:name="com.stripe.android.link.LinkActivity"
+165-->[com.stripe:link:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/5db6317ed8c3f19183a7c001cd28626e/transformed/jetified-link-20.4.0/AndroidManifest.xml:11:13-64
+166            android:exported="false"
+166-->[com.stripe:link:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/5db6317ed8c3f19183a7c001cd28626e/transformed/jetified-link-20.4.0/AndroidManifest.xml:12:13-37
+167            android:label="@string/link" />
+167-->[com.stripe:link:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/5db6317ed8c3f19183a7c001cd28626e/transformed/jetified-link-20.4.0/AndroidManifest.xml:13:13-41
+168        <activity
+168-->[com.stripe:payments-ui-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/4d22295b97362f01ff5cf05749f97acb/transformed/jetified-payments-ui-core-20.4.0/AndroidManifest.xml:10:9-13:69
+169            android:name="com.stripe.android.ui.core.cardscan.CardScanActivity"
+169-->[com.stripe:payments-ui-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/4d22295b97362f01ff5cf05749f97acb/transformed/jetified-payments-ui-core-20.4.0/AndroidManifest.xml:11:13-80
+170            android:exported="false"
+170-->[com.stripe:payments-ui-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/4d22295b97362f01ff5cf05749f97acb/transformed/jetified-payments-ui-core-20.4.0/AndroidManifest.xml:12:13-37
+171            android:theme="@style/StripePaymentSheetDefaultTheme" />
+171-->[com.stripe:payments-ui-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/4d22295b97362f01ff5cf05749f97acb/transformed/jetified-payments-ui-core-20.4.0/AndroidManifest.xml:13:13-66
+172        <activity
+172-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:17:9-20:57
+173            android:name="com.stripe.android.view.AddPaymentMethodActivity"
+173-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:18:13-76
+174            android:exported="false"
+174-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:19:13-37
+175            android:theme="@style/StripeDefaultTheme" />
+175-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:20:13-54
+176        <activity
+176-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:21:9-24:57
+177            android:name="com.stripe.android.view.PaymentMethodsActivity"
+177-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:22:13-74
+178            android:exported="false"
+178-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:23:13-37
+179            android:theme="@style/StripeDefaultTheme" />
+179-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:24:13-54
+180        <activity
+180-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:25:9-28:57
+181            android:name="com.stripe.android.view.PaymentFlowActivity"
+181-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:26:13-71
+182            android:exported="false"
+182-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:27:13-37
+183            android:theme="@style/StripeDefaultTheme" />
+183-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:28:13-54
+184        <activity
+184-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:29:9-33:58
+185            android:name="com.stripe.android.view.PaymentAuthWebViewActivity"
+185-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:30:13-78
+186            android:exported="false"
+186-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:31:13-37
+187            android:theme="@style/StripeDefaultTheme"
+187-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:32:13-54
+188            android:windowSoftInputMode="adjustResize" />
+188-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:33:13-55
+189        <activity
+189-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:34:9-37:61
+190            android:name="com.stripe.android.view.PaymentRelayActivity"
+190-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:35:13-72
+191            android:exported="false"
+191-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:36:13-37
+192            android:theme="@style/StripeTransparentTheme" />
+192-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:37:13-58
+193        <!--
+194        Set android:launchMode="singleTop" so that the StripeBrowserLauncherActivity instance that
+195        launched the browser Activity will also handle the return URL deep link.
+196        -->
+197        <activity
+197-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:43:9-47:61
+198            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+198-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:44:13-85
+199            android:exported="false"
+199-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:45:13-37
+200            android:launchMode="singleTask"
+200-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:46:13-44
+201            android:theme="@style/StripeTransparentTheme" />
+201-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:47:13-58
+202        <activity
+202-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:48:9-65:20
+203            android:name="com.stripe.android.payments.StripeBrowserProxyReturnActivity"
+203-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:49:13-88
+204            android:exported="true"
+204-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:50:13-36
+205            android:launchMode="singleTask"
+205-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:51:13-44
+206            android:theme="@style/StripeTransparentTheme" >
+206-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:52:13-58
+207            <intent-filter>
+207-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:53:13-64:29
+208                <action android:name="android.intent.action.VIEW" />
+208-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:13-65
+208-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:21-62
+209
+210                <category android:name="android.intent.category.DEFAULT" />
+210-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:29:17-76
+210-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:29:27-73
+211                <category android:name="android.intent.category.BROWSABLE" />
+211-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:30:17-78
+211-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:30:27-75
+212
+213                <!-- Must match `DefaultReturnUrl#value`. -->
+214                <data
+214-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:13-43
+215                    android:host="payment_return_url"
+216                    android:path="/com.quomodosoft.shopapp"
+217                    android:scheme="stripesdk" />
+217-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:18:19-40
+218            </intent-filter>
+219        </activity>
+220        <activity
+220-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:66:9-69:57
+221            android:name="com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity"
+221-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:67:13-114
+222            android:exported="false"
+222-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:68:13-37
+223            android:theme="@style/StripeDefaultTheme" />
+223-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:69:13-54
+224        <activity
+224-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:70:9-73:66
+225            android:name="com.stripe.android.googlepaylauncher.StripeGooglePayActivity"
+225-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:71:13-88
+226            android:exported="false"
+226-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:72:13-37
+227            android:theme="@style/StripeGooglePayDefaultTheme" />
+227-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:73:13-63
+228        <activity
+228-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:74:9-77:66
+229            android:name="com.stripe.android.googlepaylauncher.GooglePayLauncherActivity"
+229-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:75:13-90
+230            android:exported="false"
+230-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:76:13-37
+231            android:theme="@style/StripeGooglePayDefaultTheme" />
+231-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:77:13-63
+232        <activity
+232-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:78:9-81:66
+233            android:name="com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity"
+233-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:79:13-103
+234            android:exported="false"
+234-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:80:13-37
+235            android:theme="@style/StripeGooglePayDefaultTheme" />
+235-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:81:13-63
+236        <activity
+236-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:82:9-85:62
+237            android:name="com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity"
+237-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:83:13-107
+238            android:exported="false"
+238-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:84:13-37
+239            android:theme="@style/PayLauncherDefaultTheme" />
+239-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:85:13-59
+240        <activity
+240-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:86:9-89:61
+241            android:name="com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity"
+241-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:87:13-97
+242            android:exported="false"
+242-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:88:13-37
+243            android:theme="@style/StripeTransparentTheme" />
+243-->[com.stripe:payments-core:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/ec89922c0d2f120b16e912f318bc1177/transformed/jetified-payments-core-20.4.0/AndroidManifest.xml:89:13-58
+244
+245        <receiver
+245-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:50:9-61:20
+246            android:name="com.onesignal.FCMBroadcastReceiver"
+246-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:51:13-62
+247            android:exported="true"
+247-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:52:13-36
+248            android:permission="com.google.android.c2dm.permission.SEND" >
+248-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:53:13-73
+249
+250            <!-- High priority so OneSignal payloads can be filtered from other FCM receivers -->
+251            <intent-filter android:priority="999" >
+251-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:56:13-60:29
+251-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:56:28-50
+252                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+252-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:57:17-81
+252-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:57:25-78
+253
+254                <category android:name="com.quomodosoft.shopapp" />
+254-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:59:17-61
+254-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:59:27-58
+255            </intent-filter>
+256        </receiver>
+257
+258        <service
+258-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:63:9-69:19
+259            android:name="com.onesignal.HmsMessageServiceOneSignal"
+259-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:64:13-68
+260            android:exported="false" >
+260-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:65:13-37
+261            <intent-filter>
+261-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:66:13-68:29
+262                <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
+262-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:67:17-81
+262-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:67:25-78
+263            </intent-filter>
+264        </service>
+265
+266        <activity
+266-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:71:9-79:20
+267            android:name="com.onesignal.NotificationOpenedActivityHMS"
+267-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:72:13-71
+268            android:exported="true"
+268-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:73:13-36
+269            android:noHistory="true"
+269-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:74:13-37
+270            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+270-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:75:13-72
+271            <intent-filter>
+271-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:76:13-78:29
+272                <action android:name="android.intent.action.VIEW" />
+272-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:13-65
+272-->[com.stripe:financial-connections:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/df4b93620cee966ea13aaa4fc57e9b28/transformed/jetified-financial-connections-20.4.0/AndroidManifest.xml:16:21-62
+273            </intent-filter>
+274        </activity>
+275
+276        <service
+276-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:81:9-83:40
+277            android:name="com.onesignal.FCMIntentService"
+277-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:82:13-58
+278            android:exported="false" />
+278-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:83:13-37
+279        <service
+279-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:84:9-87:72
+280            android:name="com.onesignal.FCMIntentJobService"
+280-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:85:13-61
+281            android:exported="false"
+281-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:86:13-37
+282            android:permission="android.permission.BIND_JOB_SERVICE" />
+282-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:87:13-69
+283        <service
+283-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:88:9-91:43
+284            android:name="com.onesignal.SyncService"
+284-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:89:13-53
+285            android:exported="false"
+285-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:90:13-37
+286            android:stopWithTask="true" />
+286-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:91:13-40
+287        <service
+287-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:92:9-95:72
+288            android:name="com.onesignal.SyncJobService"
+288-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:93:13-56
+289            android:exported="false"
+289-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:94:13-37
+290            android:permission="android.permission.BIND_JOB_SERVICE" />
+290-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:95:13-69
+291
+292        <activity
+292-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:97:9-100:75
+293            android:name="com.onesignal.PermissionsActivity"
+293-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:98:13-61
+294            android:exported="false"
+294-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:99:13-37
+295            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+295-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:100:13-72
+296
+297        <receiver
+297-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:102:9-104:39
+298            android:name="com.onesignal.NotificationDismissReceiver"
+298-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:103:13-69
+299            android:exported="true" />
+299-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:104:13-36
+300        <receiver
+300-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:105:9-112:20
+301            android:name="com.onesignal.BootUpReceiver"
+301-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:106:13-56
+302            android:exported="true" >
+302-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:107:13-36
+303            <intent-filter>
+303-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:108:13-111:29
+304                <action android:name="android.intent.action.BOOT_COMPLETED" />
+304-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:109:17-79
+304-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:109:25-76
+305                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+305-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:110:17-82
+305-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:110:25-79
+306            </intent-filter>
+307        </receiver>
+308        <receiver
+308-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:113:9-119:20
+309            android:name="com.onesignal.UpgradeReceiver"
+309-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:114:13-57
+310            android:exported="true" >
+310-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:115:13-36
+311            <intent-filter>
+311-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:116:13-118:29
+312                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+312-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:117:17-84
+312-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:117:25-81
+313            </intent-filter>
+314        </receiver>
+315
+316        <activity
+316-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:121:9-127:75
+317            android:name="com.onesignal.NotificationOpenedReceiver"
+317-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:122:13-68
+318            android:excludeFromRecents="true"
+318-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:123:13-46
+319            android:exported="true"
+319-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:124:13-36
+320            android:noHistory="true"
+320-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:125:13-37
+321            android:taskAffinity=""
+321-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:126:13-36
+322            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+322-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:127:13-72
+323        <activity
+323-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:128:9-133:75
+324            android:name="com.onesignal.NotificationOpenedReceiverAndroid22AndOlder"
+324-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:129:13-85
+325            android:excludeFromRecents="true"
+325-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:130:13-46
+326            android:exported="true"
+326-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:131:13-36
+327            android:noHistory="true"
+327-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:132:13-37
+328            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+328-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:133:13-72
+329        <activity
+329-->[com.stripe:stripe-3ds2-android:6.1.5] /Users/lavanya/.gradle/caches/transforms-3/4765ef3b6fd17c931839a6084400a562/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:10:9-13:54
+330            android:name="com.stripe.android.stripe3ds2.views.ChallengeActivity"
+330-->[com.stripe:stripe-3ds2-android:6.1.5] /Users/lavanya/.gradle/caches/transforms-3/4765ef3b6fd17c931839a6084400a562/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:11:13-81
+331            android:exported="false"
+331-->[com.stripe:stripe-3ds2-android:6.1.5] /Users/lavanya/.gradle/caches/transforms-3/4765ef3b6fd17c931839a6084400a562/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:12:13-37
+332            android:theme="@style/Stripe3DS2Theme" />
+332-->[com.stripe:stripe-3ds2-android:6.1.5] /Users/lavanya/.gradle/caches/transforms-3/4765ef3b6fd17c931839a6084400a562/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:13:13-51
+333        <activity
+333-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:23:9-27:75
+334            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+334-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:24:13-93
+335            android:excludeFromRecents="true"
+335-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:25:13-46
+336            android:exported="false"
+336-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:26:13-37
+337            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+337-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:27:13-72
+338        <!--
+339            Service handling Google Sign-In user revocation. For apps that do not integrate with
+340            Google Sign-In, this service will never be started.
+341        -->
+342        <service
+342-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:33:9-37:51
+343            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+343-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:34:13-89
+344            android:exported="true"
+344-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:35:13-36
+345            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+345-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:36:13-107
+346            android:visibleToInstantApps="true" /> <!-- Needs to be explicitly declared on P+ -->
+346-->[com.google.android.gms:play-services-auth:20.4.0] /Users/lavanya/.gradle/caches/transforms-3/b57a164ee87c546def630624a5460a63/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:37:13-48
+347        <uses-library
+347-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+348            android:name="org.apache.http.legacy"
+348-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+349            android:required="false" />
+349-->[com.google.android.gms:play-services-maps:18.0.2] /Users/lavanya/.gradle/caches/transforms-3/94d7322ee130f66819a76f5dc753547f/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+350
+351        <activity
+351-->[com.google.android.gms:play-services-base:18.0.1] /Users/lavanya/.gradle/caches/transforms-3/c4bea628e1a5e8a5184ebbf761456da9/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+352            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+352-->[com.google.android.gms:play-services-base:18.0.1] /Users/lavanya/.gradle/caches/transforms-3/c4bea628e1a5e8a5184ebbf761456da9/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+353            android:exported="false"
+353-->[com.google.android.gms:play-services-base:18.0.1] /Users/lavanya/.gradle/caches/transforms-3/c4bea628e1a5e8a5184ebbf761456da9/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+354            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+354-->[com.google.android.gms:play-services-base:18.0.1] /Users/lavanya/.gradle/caches/transforms-3/c4bea628e1a5e8a5184ebbf761456da9/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+355
+356        <receiver
+356-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:28:9-35:20
+357            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+357-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:29:13-78
+358            android:exported="true"
+358-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:30:13-36
+359            android:permission="com.google.android.c2dm.permission.SEND" >
+359-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:31:13-73
+360            <intent-filter>
+360-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:32:13-34:29
+361                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+361-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:57:17-81
+361-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:57:25-78
+362            </intent-filter>
+363        </receiver>
+364        <!--
+365             FirebaseMessagingService performs security checks at runtime,
+366             but set to not exported to explicitly avoid allowing another app to call it.
+367        -->
+368        <service
+368-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:41:9-48:19
+369            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+369-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:42:13-82
+370            android:directBootAware="true"
+370-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:43:13-43
+371            android:exported="false" >
+371-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:44:13-37
+372            <intent-filter android:priority="-500" >
+372-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:13-47:29
+372-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:45:28-51
+373                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+373-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:17-78
+373-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:46:25-75
+374            </intent-filter>
+375        </service>
+376        <service
+376-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:49:9-55:19
+377            android:name="com.google.firebase.components.ComponentDiscoveryService"
+377-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:50:13-84
+378            android:directBootAware="true"
+378-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:35:13-43
+379            android:exported="false" >
+379-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:51:13-37
+380            <meta-data
+380-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:52:13-54:85
+381                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+381-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:53:17-119
+382                android:value="com.google.firebase.components.ComponentRegistrar" />
+382-->[com.google.firebase:firebase-messaging:22.0.0] /Users/lavanya/.gradle/caches/transforms-3/83b8c0066cc256e6f562792803f7d31f/transformed/jetified-firebase-messaging-22.0.0/AndroidManifest.xml:54:17-82
+383            <meta-data
+383-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/lavanya/.gradle/caches/transforms-3/9f535e2fb4e7fb60af298e1159c1bbc3/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:28:13-30:85
+384                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+384-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/lavanya/.gradle/caches/transforms-3/9f535e2fb4e7fb60af298e1159c1bbc3/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:29:17-115
+385                android:value="com.google.firebase.components.ComponentRegistrar" />
+385-->[com.google.firebase:firebase-datatransport:18.0.0] /Users/lavanya/.gradle/caches/transforms-3/9f535e2fb4e7fb60af298e1159c1bbc3/transformed/jetified-firebase-datatransport-18.0.0/AndroidManifest.xml:30:17-82
+386            <meta-data
+386-->[com.google.firebase:firebase-installations:17.0.0] /Users/lavanya/.gradle/caches/transforms-3/494fecaf35e89e3e83e8625a388db000/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:18:13-20:85
+387                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+387-->[com.google.firebase:firebase-installations:17.0.0] /Users/lavanya/.gradle/caches/transforms-3/494fecaf35e89e3e83e8625a388db000/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:19:17-127
+388                android:value="com.google.firebase.components.ComponentRegistrar" />
+388-->[com.google.firebase:firebase-installations:17.0.0] /Users/lavanya/.gradle/caches/transforms-3/494fecaf35e89e3e83e8625a388db000/transformed/jetified-firebase-installations-17.0.0/AndroidManifest.xml:20:17-82
+389        </service>
+390
+391        <provider
+391-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:26:9-31:39
+392            android:name="com.google.firebase.provider.FirebaseInitProvider"
+392-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:27:13-77
+393            android:authorities="com.quomodosoft.shopapp.firebaseinitprovider"
+393-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:28:13-72
+394            android:directBootAware="true"
+394-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:29:13-43
+395            android:exported="false"
+395-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:30:13-37
+396            android:initOrder="100" />
+396-->[com.google.firebase:firebase-common:20.0.0] /Users/lavanya/.gradle/caches/transforms-3/1459cdd474b4467943d06ed1d8ff6fba/transformed/jetified-firebase-common-20.0.0/AndroidManifest.xml:31:13-36
+397
+398        <meta-data
+398-->[com.google.android.gms:play-services-basement:18.1.0] /Users/lavanya/.gradle/caches/transforms-3/a309a35c55f5b6dc266029dbf35437e9/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+399            android:name="com.google.android.gms.version"
+399-->[com.google.android.gms:play-services-basement:18.1.0] /Users/lavanya/.gradle/caches/transforms-3/a309a35c55f5b6dc266029dbf35437e9/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+400            android:value="@integer/google_play_services_version" />
+400-->[com.google.android.gms:play-services-basement:18.1.0] /Users/lavanya/.gradle/caches/transforms-3/a309a35c55f5b6dc266029dbf35437e9/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+401
+402        <provider
+402-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:31:9-39:20
+403            android:name="androidx.startup.InitializationProvider"
+403-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:32:13-67
+404            android:authorities="com.quomodosoft.shopapp.androidx-startup"
+404-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:33:13-68
+405            android:exported="false" >
+405-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:34:13-37
+406            <meta-data
+406-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:36:13-38:52
+407                android:name="androidx.work.WorkManagerInitializer"
+407-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:37:17-68
+408                android:value="androidx.startup" />
+408-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:38:17-49
+409            <meta-data
+409-->[androidx.emoji2:emoji2:1.0.0] /Users/lavanya/.gradle/caches/transforms-3/9df8e239d9199b9cdb7ce9973094c53c/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:31:13-33:52
+410                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+410-->[androidx.emoji2:emoji2:1.0.0] /Users/lavanya/.gradle/caches/transforms-3/9df8e239d9199b9cdb7ce9973094c53c/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:32:17-75
+411                android:value="androidx.startup" />
+411-->[androidx.emoji2:emoji2:1.0.0] /Users/lavanya/.gradle/caches/transforms-3/9df8e239d9199b9cdb7ce9973094c53c/transformed/jetified-emoji2-1.0.0/AndroidManifest.xml:33:17-49
+412            <meta-data
+412-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/lavanya/.gradle/caches/transforms-3/0f5d088dba943357554d898a4350f551/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+413                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+413-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/lavanya/.gradle/caches/transforms-3/0f5d088dba943357554d898a4350f551/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+414                android:value="androidx.startup" />
+414-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/lavanya/.gradle/caches/transforms-3/0f5d088dba943357554d898a4350f551/transformed/jetified-lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+415            <meta-data
+415-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+416                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+416-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+417                android:value="androidx.startup" />
+417-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+418        </provider>
+419
+420        <service
+420-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:41:9-46:35
+421            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+421-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:42:13-88
+422            android:directBootAware="false"
+422-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:43:13-44
+423            android:enabled="@bool/enable_system_alarm_service_default"
+423-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:44:13-72
+424            android:exported="false" />
+424-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:45:13-37
+425        <service
+425-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:47:9-53:35
+426            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+426-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:48:13-84
+427            android:directBootAware="false"
+427-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:49:13-44
+428            android:enabled="@bool/enable_system_job_service_default"
+428-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:50:13-70
+429            android:exported="true"
+429-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:51:13-36
+430            android:permission="android.permission.BIND_JOB_SERVICE" />
+430-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:52:13-69
+431        <service
+431-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:54:9-59:35
+432            android:name="androidx.work.impl.foreground.SystemForegroundService"
+432-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:55:13-81
+433            android:directBootAware="false"
+433-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:56:13-44
+434            android:enabled="@bool/enable_system_foreground_service_default"
+434-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:57:13-77
+435            android:exported="false" />
+435-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:58:13-37
+436
+437        <receiver
+437-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:61:9-66:35
+438            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+438-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:62:13-88
+439            android:directBootAware="false"
+439-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:63:13-44
+440            android:enabled="true"
+440-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:64:13-35
+441            android:exported="false" />
+441-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:65:13-37
+442        <receiver
+442-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:67:9-77:20
+443            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+443-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:68:13-106
+444            android:directBootAware="false"
+444-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:69:13-44
+445            android:enabled="false"
+445-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:70:13-36
+446            android:exported="false" >
+446-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:71:13-37
+447            <intent-filter>
+447-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:73:13-76:29
+448                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+448-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:17-87
+448-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:74:25-84
+449                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+449-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:17-90
+449-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:75:25-87
+450            </intent-filter>
+451        </receiver>
+452        <receiver
+452-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:78:9-88:20
+453            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+453-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:79:13-104
+454            android:directBootAware="false"
+454-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:80:13-44
+455            android:enabled="false"
+455-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:81:13-36
+456            android:exported="false" >
+456-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:82:13-37
+457            <intent-filter>
+457-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:84:13-87:29
+458                <action android:name="android.intent.action.BATTERY_OKAY" />
+458-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:17-77
+458-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:85:25-74
+459                <action android:name="android.intent.action.BATTERY_LOW" />
+459-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:17-76
+459-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:86:25-73
+460            </intent-filter>
+461        </receiver>
+462        <receiver
+462-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:89:9-99:20
+463            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+463-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:90:13-104
+464            android:directBootAware="false"
+464-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:91:13-44
+465            android:enabled="false"
+465-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:92:13-36
+466            android:exported="false" >
+466-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:93:13-37
+467            <intent-filter>
+467-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:95:13-98:29
+468                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+468-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:17-83
+468-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:96:25-80
+469                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+469-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:17-82
+469-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:97:25-79
+470            </intent-filter>
+471        </receiver>
+472        <receiver
+472-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:100:9-109:20
+473            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+473-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:101:13-103
+474            android:directBootAware="false"
+474-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:102:13-44
+475            android:enabled="false"
+475-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:103:13-36
+476            android:exported="false" >
+476-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:104:13-37
+477            <intent-filter>
+477-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:106:13-108:29
+478                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+478-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:17-79
+478-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:107:25-76
+479            </intent-filter>
+480        </receiver>
+481        <receiver
+481-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:110:9-121:20
+482            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+482-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:111:13-88
+483            android:directBootAware="false"
+483-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:112:13-44
+484            android:enabled="false"
+484-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:113:13-36
+485            android:exported="false" >
+485-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:114:13-37
+486            <intent-filter>
+486-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:116:13-120:29
+487                <action android:name="android.intent.action.BOOT_COMPLETED" />
+487-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:109:17-79
+487-->[com.onesignal:OneSignal:4.8.5] /Users/lavanya/.gradle/caches/transforms-3/002237c9fbc194c8f6fe7fc39dbf808b/transformed/jetified-OneSignal-4.8.5/AndroidManifest.xml:109:25-76
+488                <action android:name="android.intent.action.TIME_SET" />
+488-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:17-73
+488-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:118:25-70
+489                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+489-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:17-81
+489-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:119:25-78
+490            </intent-filter>
+491        </receiver>
+492        <receiver
+492-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:122:9-131:20
+493            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+493-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:123:13-99
+494            android:directBootAware="false"
+494-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:124:13-44
+495            android:enabled="@bool/enable_system_alarm_service_default"
+495-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:125:13-72
+496            android:exported="false" >
+496-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:126:13-37
+497            <intent-filter>
+497-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:128:13-130:29
+498                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+498-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:17-98
+498-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:129:25-95
+499            </intent-filter>
+500        </receiver>
+501        <receiver
+501-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:132:9-142:20
+502            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+502-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:133:13-78
+503            android:directBootAware="false"
+503-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:134:13-44
+504            android:enabled="true"
+504-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:135:13-35
+505            android:exported="true"
+505-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:136:13-36
+506            android:permission="android.permission.DUMP" >
+506-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:137:13-57
+507            <intent-filter>
+507-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:139:13-141:29
+508                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+508-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:17-88
+508-->[androidx.work:work-runtime:2.7.1] /Users/lavanya/.gradle/caches/transforms-3/9ab3a56ed5e79d78952b49252278b06d/transformed/work-runtime-2.7.1/AndroidManifest.xml:140:25-85
+509            </intent-filter>
+510        </receiver>
+511
+512        <uses-library
+512-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+513            android:name="androidx.window.extensions"
+513-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+514            android:required="false" />
+514-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+515        <uses-library
+515-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+516            android:name="androidx.window.sidecar"
+516-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+517            android:required="false" />
+517-->[androidx.window:window:1.0.0-beta04] /Users/lavanya/.gradle/caches/transforms-3/015f1b86ac56c3ed5e866e393be15157/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+518
+519        <receiver
+519-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+520            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+520-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+521            android:directBootAware="false"
+521-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+522            android:enabled="true"
+522-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+523            android:exported="true"
+523-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+524            android:permission="android.permission.DUMP" >
+524-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+525            <intent-filter>
+525-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+526                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+526-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+526-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+527            </intent-filter>
+528            <intent-filter>
+528-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+529                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+529-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+529-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+530            </intent-filter>
+531            <intent-filter>
+531-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+532                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+532-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+532-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+533            </intent-filter>
+534            <intent-filter>
+534-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+535                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+535-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+535-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/lavanya/.gradle/caches/transforms-3/65c8038933a989141f7560f883607bfc/transformed/jetified-profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+536            </intent-filter>
+537        </receiver>
+538
+539        <service
+539-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:29:9-35:19
+540            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+540-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:30:13-103
+541            android:exported="false" >
+541-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:31:13-37
+542            <meta-data
+542-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:32:13-34:39
+543                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+543-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:33:17-94
+544                android:value="cct" />
+544-->[com.google.android.datatransport:transport-backend-cct:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/ac10697996c1b1cafdb44d205ea30953/transformed/jetified-transport-backend-cct-3.0.0/AndroidManifest.xml:34:17-36
+545        </service>
+546        <service
+546-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:26:9-30:19
+547            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+547-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:27:13-117
+548            android:exported="false"
+548-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:28:13-37
+549            android:permission="android.permission.BIND_JOB_SERVICE" >
+549-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:29:13-69
+550        </service>
+551
+552        <receiver
+552-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:32:9-34:40
+553            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+553-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:33:13-132
+554            android:exported="false" />
+554-->[com.google.android.datatransport:transport-runtime:3.0.0] /Users/lavanya/.gradle/caches/transforms-3/6ecc363bca3a0c482ad398200c0ed922/transformed/jetified-transport-runtime-3.0.0/AndroidManifest.xml:34:13-37
+555
+556        <service
+556-->[androidx.room:room-runtime:2.2.5] /Users/lavanya/.gradle/caches/transforms-3/f9c26bcb81bff40393ab7f1b7b22dd5b/transformed/room-runtime-2.2.5/AndroidManifest.xml:25:9-28:40
+557            android:name="androidx.room.MultiInstanceInvalidationService"
+557-->[androidx.room:room-runtime:2.2.5] /Users/lavanya/.gradle/caches/transforms-3/f9c26bcb81bff40393ab7f1b7b22dd5b/transformed/room-runtime-2.2.5/AndroidManifest.xml:26:13-74
+558            android:directBootAware="true"
+558-->[androidx.room:room-runtime:2.2.5] /Users/lavanya/.gradle/caches/transforms-3/f9c26bcb81bff40393ab7f1b7b22dd5b/transformed/room-runtime-2.2.5/AndroidManifest.xml:27:13-43
+559            android:exported="false" />
+559-->[androidx.room:room-runtime:2.2.5] /Users/lavanya/.gradle/caches/transforms-3/f9c26bcb81bff40393ab7f1b7b22dd5b/transformed/room-runtime-2.2.5/AndroidManifest.xml:28:13-37
+560
+561        <meta-data
+561-->[com.google.android.instantapps:instantapps:1.1.0] /Users/lavanya/.gradle/caches/transforms-3/fb81b40ea52e22fbe64d0677246b5072/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:10:9-12:33
+562            android:name="aia-compat-api-min-version"
+562-->[com.google.android.instantapps:instantapps:1.1.0] /Users/lavanya/.gradle/caches/transforms-3/fb81b40ea52e22fbe64d0677246b5072/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:11:13-54
+563            android:value="1" />
+563-->[com.google.android.instantapps:instantapps:1.1.0] /Users/lavanya/.gradle/caches/transforms-3/fb81b40ea52e22fbe64d0677246b5072/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:12:13-30
+564    </application>
+565
+566</manifest>
